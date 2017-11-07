@@ -4,7 +4,7 @@ class Formstructure
 {
 	private $input;
 
-	public function input($type = "", $value = "", $name = "", $labelContent = "", $errMessage = ""){
+	public function setInput($type = "", $value = "", $name = "", $labelContent = "", $errMessage = ""){
 		
 		
 		if ($type =="submit" || $type =="reset" || $type =="button"){
@@ -21,10 +21,10 @@ class Formstructure
 		echo $this->input;
 	}
 
-	public function textArea($name = "", $labelContent = "", $rows = "", $cols = ""){
+	public function textArea($name = "", $labelContent = "", $value = "", $rows = "", $cols = "", $maxLength= "2000"){
 		$this->input = '<p>
 		<label class="labelForm" for="'.$name.'">'.$labelContent.'</label>
-		<textarea name= "'.$name.'" rows= "'.$rows.'" cols="'.$cols.'" ></textarea>
+		<textarea name= "'.$name.'" rows= "'.$rows.'" cols="'.$cols.'" required="required" maxlength="'.$maxLength.'">'.$value.'</textarea>
 		</p>
 		';
 		echo $this->input;

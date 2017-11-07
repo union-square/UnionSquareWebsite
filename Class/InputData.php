@@ -33,13 +33,26 @@ class InputData
 			'regex' =>'/^0[1-68]([-. ]?[0-9]{2}){4}$/'],
 		'message' =>[
 			'name' => "message",
-			'labelContent' => 'Message<b>*</b> : ',
+			'labelContent' => 'Message (2000 caractères maximum)<b>*</b> : ',
+			'value' => '',
 			'rows' => '10',
-			'cols' => '50'
+			'cols' => '50',
+			'maxLength' => '2000'
 		]
 	];
 
 	public function getData(){
 		return $this->data;
+	}
+
+	public function setData($post){
+		foreach ($this->data as $key => &$value) {
+			if(!empty($post)){
+				if ($value['value'] == ''){
+					$value['value'] = $post[$key];
+				}
+			}
+			
+		}
 	}
 }

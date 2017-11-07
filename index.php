@@ -32,12 +32,9 @@ require ("class/InputData.php");
 		//si le formulaire n'a pas été envoyé: 
 		} else{
 			var_dump($_POST);
-			foreach ($data->getData() as $key => $value) {
-				if(!empty($_POST[$key])){
-					
-				}
-			}
+			$data->setData($_POST);
 			echo $check->getErrorMessage();
+			var_dump($data->getData());
 			echo'hello3';
 			?>
 			<form method="post">
@@ -46,13 +43,13 @@ require ("class/InputData.php");
 				foreach ($data->getData() as  $value) {
 
 					if(!empty($value['type'])){
-						$form->input($value['type'], $value['value'], $value['name'], $value['labelContent'], $value['errMessage']);	
+						$form->setInput($value['type'], $value['value'], $value['name'], $value['labelContent'], $value['errMessage']);	
 					}
 					elseif (!empty($value['rows'])){
-						$form->textArea($value['name'], $value['labelContent'], $value['rows'], $value['cols']);
+						$form->textArea($value['name'], $value['labelContent'], $value['value'],$value['rows'], $value['cols'], $value['maxLength']);
 					}
 				}
-				$form->input('submit', 'valider');
+				$form->setInput('submit', 'valider');
 				?>
 			</form>		
 		<?php } ?>
