@@ -3,13 +3,6 @@
 class InputData
 {
 	private $data =[
-		'contactName'=>[
-			'type'=> 'text',
-			'value' =>'',
-			'name' =>'contactName',
-			'labelContent' =>'Nom <b>*</b> : ' ,
-			'errMessage' =>"Votre nom de famille ne semble pas valide (entre 2 et 60 caractères, absence de chiffre", 
-			'regex'=>'/^[A-Za-zéèêëàîïôù-]{2,}$/'],
 		'surname'=>[
 			'type'=> 'text',
 			'value' =>'',
@@ -17,6 +10,13 @@ class InputData
 			'labelContent' =>'Prénom <b>*</b> : ' ,
 			'errMessage' =>"Votre prénom ne semble pas valide (entre 2 et 60 caractères, absence de chiffre)",
 			'regex' =>'/^[A-Za-zéèêëàîïôù-]{2,}$/'],
+		'contactName'=>[
+			'type'=> 'text',
+			'value' =>'',
+			'name' =>'contactName',
+			'labelContent' =>'Nom <b>*</b> : ' ,
+			'errMessage' =>"Votre nom de famille ne semble pas valide (entre 2 et 60 caractères, absence de chiffre", 
+			'regex'=>'/^[A-Za-zéèêëàîïôù-]{2,}$/'],
 		'contactEmail'=>[
 			'type'=> 'email',
 			'value' =>'',
@@ -37,8 +37,13 @@ class InputData
 			'value' => '',
 			'rows' => '10',
 			'cols' => '50',
-			'maxLength' => '2000'
-		]
+			'maxLength' => '2000'],
+		'submit' =>[
+			'type' => 'submit',
+			'value' => 'Envoyer'],
+		'reset' =>[
+			'type' => 'reset',
+			'value' => 'Réinitialiser le formulaire']
 	];
 
 	public function getData(){

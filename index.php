@@ -14,6 +14,7 @@ require ("class/InputData.php");
 		<?php
 		$form = new FormStructure();
 		$data = new InputData();
+		
 		$check = new Check();
 		echo'hello1';
 		$check->checkForm($data);
@@ -31,25 +32,14 @@ require ("class/InputData.php");
 
 		//si le formulaire n'a pas été envoyé: 
 		} else{
-			var_dump($_POST);
+			/*var_dump($_POST);*/
 			$data->setData($_POST);
 			echo $check->getErrorMessage();
-			var_dump($data->getData());
 			echo'hello3';
 			?>
 			<form method="post">
 				<?php
-				
-				foreach ($data->getData() as  $value) {
-
-					if(!empty($value['type'])){
-						$form->setInput($value['type'], $value['value'], $value['name'], $value['labelContent'], $value['errMessage']);	
-					}
-					elseif (!empty($value['rows'])){
-						$form->textArea($value['name'], $value['labelContent'], $value['value'],$value['rows'], $value['cols'], $value['maxLength']);
-					}
-				}
-				$form->setInput('submit', 'valider');
+				$form->setInput($data);
 				?>
 			</form>		
 		<?php } ?>
