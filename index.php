@@ -2,12 +2,19 @@
 require ("class/FormStructure.php");
 require ("class/Check.php");
 require ("class/InputData.php");
+require ("class/Recaptcha.php");
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+        function captchaSubmit(data) {
+            document.getElementById("contact").submit();
+        }
+    </script>
 </head>
 <body>
 	<div>
@@ -15,11 +22,16 @@ require ("class/InputData.php");
 		$form = new FormStructure();
 		$data = new InputData();
 		$check = new Check();
+		$recaptcha = new Recaptcha();
 		echo'hello1';
+
 		$check->checkForm($data);
 		if(!empty($_POST) && $check->getCheckIsOK() == true){
-
+			//echo $_POST["g-recaptcha-response"];
+			$recaptcha->curlRequest();
+			$recaptcha->parseData();
 			echo 'hello2';
+
 		//si le formulaire a été envoyé: 
 			//vérification donnée bonne
 			//vérification du capchat
@@ -31,25 +43,14 @@ require ("class/InputData.php");
 
 		//si le formulaire n'a pas été envoyé: 
 		} else{
-			var_dump($_POST);
+			/*var_dump($_POST);*/
 			$data->setData($_POST);
 			echo $check->getErrorMessage();
-			var_dump($data->getData());
 			echo'hello3';
 			?>
-			<form method="post">
+			<form id="contact" method="post">
 				<?php
-				
-				foreach ($data->getData() as  $value) {
-
-					if(!empty($value['type'])){
-						$form->setInput($value['type'], $value['value'], $value['name'], $value['labelContent'], $value['errMessage']);	
-					}
-					elseif (!empty($value['rows'])){
-						$form->textArea($value['name'], $value['labelContent'], $value['value'],$value['rows'], $value['cols'], $value['maxLength']);
-					}
-				}
-				$form->setInput('submit', 'valider');
+				$form->setInput($data);
 				?>
 			</form>		
 		<?php } ?>
