@@ -2,7 +2,6 @@
 
 class Recaptcha
 {
-
 	private $secret;
 
 	private $remoteip;
@@ -16,6 +15,8 @@ class Recaptcha
 	private $curlData;
 
 	private $recaptcha;
+
+	private $errorMessage;
 
 	public function setSecret()
 	{
@@ -89,6 +90,19 @@ class Recaptcha
 		return $this->recaptcha;
 	}
 
+	public function setErrorMessage()
+	{
+		$this->errorMessage = '<p>La validation Recaptcha indique que la demande n\'est pas valide. Veuillez reformuler votre message.<p>
+        		<form action="http://localhost/form/index.php">
+    				<input type="submit" value="retour au formulaire" />
+				</form>';
+	}
+
+	public function getErrorMessage()
+	{
+		return $this->errorMessage;
+	}
+
 	public function curlRequest()
 	{
 		$this->setCurl();
@@ -113,17 +127,11 @@ class Recaptcha
 	{
 		$this->setRecaptcha();
 		$recaptcha = $this->getRecaptcha();
-		if ($recaptcha["success"])
-            echo '<p>Votre message a bien été transmis au collectif Union Square, vous recevrez une réponse dans les meilleurs délais.<p>
-        		<form action="http://localhost/form/index.php">
-    				<input type="submit" value="retour à la page d\'accueil" />
-				</form>'
-        ;
-        else
-            echo '<p>La validation Recaptcha indique que la demande n\'est pas valide. Veuillez reformuler votre message.<p>
-        		<form action="http://localhost/form/index.php">
-    				<input type="submit" value="retour au formulaire" />
-				</form>';
+		if ($recaptcha["success"]){
+				return true;
+		} else{
+				return false;
+        }
 	}
 
 

@@ -2,6 +2,7 @@
 
 class InputData
 {
+	//tableau contenant les données nécessaires à la création du formulaire
 	private $data =[
 		'surname'=>[
 			'type'=> 'text',
@@ -15,7 +16,7 @@ class InputData
 			'value' =>'',
 			'name' =>'contactName',
 			'labelContent' =>'Nom <b>*</b> : ' ,
-			'errMessage' =>"Votre nom de famille ne semble pas valide (entre 2 et 60 caractères, absence de chiffre", 
+			'errMessage' =>"Votre nom de famille ne semble pas valide (entre 2 et 60 caractères, absence de chiffre)", 
 			'regex'=>'/^[A-Za-zéèêëàîïôù-]{2,}$/'],
 		'contactEmail'=>[
 			'type'=> 'email',
@@ -28,8 +29,8 @@ class InputData
 			'type'=> 'tel',
 			'value' =>'',
 			'name' =>'telephone',
-			'labelContent' =>'Numéro de téléphone<b>*</b> : ',
-			'errMessage' =>"Votre numéro de téléphone ne semble pas valide",
+			'labelContent' =>'Téléphone<b>*</b> : ',
+			'errMessage' =>"Votre numéro de téléphone ne semble pas valide (10 chiffres commençant par 0)",
 			'regex' =>'/^0[1-68]([-. ]?[0-9]{2}){4}$/'],
 		'message' =>[
 			'name' => "message",
@@ -38,19 +39,20 @@ class InputData
 			'rows' => '10',
 			'cols' => '50',
 			'maxLength' => '2000'],
+		'reset' =>[
+			'type' => 'reset',
+			'value' => 'Réinitialiser le formulaire'],
 		'submit' =>[
 			'type' => 'submit',
 			'value' => 'Envoyer',
-			'data-sitekey' =>  '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'],
-		'reset' =>[
-			'type' => 'reset',
-			'value' => 'Réinitialiser le formulaire']
+			'data-sitekey' =>  '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI']
 	];
 
 	public function getData(){
 		return $this->data;
 	}
 
+	//permet d'afficher dans chaque champs les valeurs qui avait été rentrées dans le formulaire après que ce formulaire ai été soumis
 	public function setData($post){
 		foreach ($this->data as $key => &$value) {
 			if(!empty($post)){
@@ -58,7 +60,6 @@ class InputData
 					$value['value'] = $post[$key];
 				}
 			}
-			
 		}
 	}
 }
