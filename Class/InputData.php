@@ -40,7 +40,8 @@ class InputData
 			'maxLength' => '2000'],
 		'submit' =>[
 			'type' => 'submit',
-			'value' => 'Envoyer'],
+			'value' => 'Envoyer',
+			'data-sitekey' =>  '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'],
 		'reset' =>[
 			'type' => 'reset',
 			'value' => 'Réinitialiser le formulaire']

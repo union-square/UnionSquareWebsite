@@ -10,10 +10,16 @@ class Formstructure
 			
 			if(!empty($value['type'])){
 				
-				if ($value['type'] =="submit" || $value['type'] =="reset" || $value['type'] =="button"){
+				if ($value['type'] =="reset" || $value['type'] =="button"){
 				$this->input = '<input type="'.$value['type'].'" value = "'.$value['value'].'"></input>';
-			
-				} elseif ($value['type'] == "text" || $value['type'] == "email" || $value['type'] == "number" || $value['type'] == "tel"){
+				
+				} 
+				//on met le submit à part pour inclure le captcha
+				elseif($value['type'] =="submit"){
+					$this->input = '<input type="'.$value['type'].'" class="g-recaptcha" data-sitekey="'.$value['data-sitekey'].'" data-callback="captchaSubmit" data-badge="inline" value = "'.$value['value'].'"></input>';
+				} 
+
+				elseif ($value['type'] == "text" || $value['type'] == "email" || $value['type'] == "number" || $value['type'] == "tel"){
 				$this->input = '<p>
 				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label>
 				<input type="'.$value['type'].'" class="champForm" id="'.$value['name'].'" name="'.$value['name'].'" value="'.$value['value'].'" min="0" max="12" step="1" required="required">
