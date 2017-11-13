@@ -2,9 +2,9 @@
 
 class Recaptcha{
 	
-	public function __construct(){
+	/*public function __construct(){
         $this->config = require('config.php');
-    }
+    }*/
 
 	public function verifyResponse($recaptcha){
 		
@@ -20,7 +20,7 @@ class Recaptcha{
 
 		$getResponse = $this->getHTTP(
 			array(
-				'secret' => $this->config['secret-key'],
+				'secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
 				'remoteip' => $remoteIp,
 				'response' => $recaptcha,
 			)
