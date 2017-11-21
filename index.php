@@ -16,7 +16,7 @@
   			<ul>
   				<li><a href="#">Acceuil</a></li>
   				<li><a href="#">Equipe</a></li>
-  				<li><a href="#">Contact & devis</a></li>
+  				<li><a href="/form.php">Contact & devis</a></li>
   			</ul>
   		</nav>
   	</header>
