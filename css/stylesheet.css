@@ -30,13 +30,23 @@ header{
 	height: 200px;
 }
 
+#mainLogo{
+	float: left;
+	margin-top: 40px;
+	margin-left: 100px;
+	height: 40px;
+	width: 80px;
+	background-image:url('../img/logo.png');
+	background-repeat: no-repeat;
+}
+
 nav#mainMenu{
-	display: flex;
 	float: right;
 	font-family: RobotoMedium;
 	font-size: 18px;
 	color: #28BC83;
 	letter-spacing: 0;
+	margin-top: 40px;
 	margin-right: 40px;
 }
 
@@ -137,6 +147,7 @@ h2{
 	margin-left: 100px;
 }
 
+<<<<<<< HEAD
 
 /*partie du concernant le formulaire de contact*/
 
@@ -190,3 +201,28 @@ textarea{
 .messageForm img{
 	padding-top: 5px;
 }
+=======
+footer{
+	width: 100%;
+	border-top: 3px solid #979797;
+	display: inline-flex;
+}
+
+.logoBot{
+	margin-top: 22px;
+	margin-left: 60px;
+	float: left;
+	height: 40px;
+	width: 80px;
+	background-image:url('../img/logo.png');
+	background-repeat: no-repeat;
+}
+
+#menuBot{
+	float: left;
+}
+
+#sign{
+	float: right;
+}
+>>>>>>> 81d8607b2d2589e3967e45f9ac32c543af2bee05
