@@ -1,138 +1,71 @@
 <?php
 
-class Recaptcha
-{
-	private $secret;
+class Recaptcha{
+	
+	/*public function __construct(){
+        $this->config = require('config.php');
+    }*/
 
-	private $remoteip;
+	public function verifyResponse($recaptcha){
+		
+		$remoteIp = $this->getIPAddress();
 
-	private $url;
+		// Discard empty solution submissions
+		if (empty($recaptcha)) {
+			return array(
+				'success' => false,
+				'error-codes' => 'missing-input',
+			);
+		}
 
-	private $response;
+		$getResponse = $this->getHTTP(
+			array(
+				'secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+				'remoteip' => $remoteIp,
+				'response' => $recaptcha,
+			)
+		);
 
-	private $curl;
+		// get reCAPTCHA server response
+		$responses = json_decode($getResponse, true);
 
-	private $curlData;
+		if (isset($responses['success']) and $responses['success'] == true) {
+			$status = true;
+		} else {
+			$status = false;
+			$error = (isset($responses['error-codes'])) ? $responses['error-codes']
+				: 'invalid-input-response';
+		}
 
-	private $recaptcha;
-
-	private $errorMessage;
-
-	public function setSecret()
-	{
-		$this->secret = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
-	}
-
-	public function getSecret()
-	{
-		return $this->secret;
-	}
-
-	public function setRemoteip()
-	{
-		$this->remoteip = $_SERVER["REMOTE_ADDR"];
-	}
-
-	public function getRemoteip()
-	{
-		return $this->remoteip;
-	}
-
-
-
-	public function setUrl()
-	{
-		$this->url = "https://www.google.com/recaptcha/api/siteverify";
-	}
-
-	public function getUrl()
-	{
-		return $this->url;
-	}
-
-	public function setResponse()
-	{
-		$this->response = $_POST["g-recaptcha-response"];
-	}
-
-	public function getResponse()
-	{
-		return $this->response;
-	}
-
-	public function setCurl()
-	{
-		$this->curl = curl_init();
-	}
-
-	public function getCurl()
-	{
-		return $this->curl;
-	}
-
-	public function setCurlData()
-	{
-		$this->curlData = curl_exec($this->getCurl());
-	}
-
-	public function getCurlData()
-	{
-		return $this->curlData;
-	}
-
-	public function setRecaptcha()
-	{
-		$this->recaptcha = json_decode($this->getCurlData(), true);
-	}
-
-	public function getRecaptcha()
-	{
-		return $this->recaptcha;
-	}
-
-	public function setErrorMessage()
-	{
-		$this->errorMessage = '<p>La validation Recaptcha indique que la demande n\'est pas valide. Veuillez reformuler votre message.<p>
-        		<form action="http://localhost/form/index.php">
-    				<input type="submit" value="retour au formulaire" />
-				</form>';
-	}
-
-	public function getErrorMessage()
-	{
-		return $this->errorMessage;
-	}
-
-	public function curlRequest()
-	{
-		$this->setCurl();
-		$this->setUrl();
-		$this->setRemoteip();
-		$this->setSecret();
-		$this->setResponse();
-		$this->setCurlData();
-		curl_setopt($this->getCurl(), CURLOPT_URL, $this->getUrl());
-        curl_setopt($this->getCurl(), CURLOPT_POST, true);
-        curl_setopt($this->getCurl(), CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($this->getCurl(), CURLOPT_POSTFIELDS, array(
-            'secret' => $this->getSecret(),
-            'response' => $this->getResponse(),
-            'remoteip' => $this->getRemoteip()
-            ));
-        $this->getCurlData();
-        curl_close($this->getCurl());
-	}
-
-	public function parseData()
-	{
-		$this->setRecaptcha();
-		$recaptcha = $this->getRecaptcha();
-		if ($recaptcha["success"]){
-				return true;
-		} else{
-				return false;
-        }
+		return array(
+			'success' => $status,
+			'error-codes' => (isset($error)) ? $error : null,
+		);
 	}
 
 
+	private function getIPAddress(){
+		if (!empty($_SERVER['HTTP_CLIENT_IP'])) 
+		{
+		$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} 
+		elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+		{
+		 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} 
+		else 
+		{
+		  $ip = $_SERVER['REMOTE_ADDR'];
+		}
+		
+		return $ip;
+	}
+
+	private function getHTTP($data){
+		
+		$url = 'https://www.google.com/recaptcha/api/siteverify?'.http_build_query($data);
+		$response = file_get_contents($url);
+
+		return $response;
+	}
 }

@@ -10,12 +10,6 @@ class Email
 
 	private $message;
 
-	private $txtMessage;
-
-	private $htmlMessage;
-
-	private $boundary;
-
 	private $lineBreak;
 
 	private $validationMessage;
@@ -31,11 +25,10 @@ class Email
 	public function setHeader($sender, $sendAddress, $reply, $replyAddress)
 	{
 		$this->setLineBreak($this->getAddresseeEmail());
-		$this->setBoundary();
-		$this->header = "From: ".$sender."<".$sendAddress.">".$this->getLineBreak();
+		/*$this->setBoundary();*/
+		$this->header .= "From: ".$sender."<".$sendAddress.">".$this->getLineBreak();
 		$this->header .= "Reply-to: ".$reply." <".$replyAddress.">".$this->getLineBreak();
-		$this->header .= "MIME-Version: 1.0".$this->getLineBreak(); 
-		$this->header .= "Content-Type: multipart/alternative;".$this->getLineBreak()." boundary=".$this->getBoundary().$this->getLineBreak();
+		$this->header .= "Content-Type: text/html;charset=\"utf-8\"".$this->getLineBreak();
 	}
 
 	public function getHeader()
@@ -45,7 +38,7 @@ class Email
 
 	public function setSubject($subject)
 	{
-		$this->subject = $subject;
+		$this->subject = utf8_encode($subject);
 	}
 
 	public function getSubject()
@@ -53,60 +46,15 @@ class Email
 		return $this->subject;
 	}
 
-	public function setMessage()
+	public function setMessage($message)
 	{
-		$this->setLineBreak($this->getAddresseeEmail());
-		$this->setBoundary();
-		$this->message = $this->getLineBreak()."--".$this->getBoundary().$this->getLineBreak();
-		//ajout du message au format texte
-		$this->message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$this->getLineBreak();
-		$this->message .= "Content-Transfer-Encoding: 8bit".$this->getLineBreak();
-		$this->message .= $this->getLineBreak().$this->getTxtMessage().$this->getLineBreak();
-
-		$this->message .= $this->getLineBreak()."--".$this->getBoundary().$this->getLineBreak();
-		//ajout du message au format HTML
-		$this->message .= "Content-Type: text/html; charset=\"ISO-8859-1\"".$this->getLineBreak();
-		$this->message .= "Content-Transfer-Encoding: 8bit".$this->getLineBreak();
-		$this->message .= $this->getLineBreak().$this->getHtmlMessage().$this->getLineBreak();
-
-		$this->message .= $this->getLineBreak()."--".$this->getBoundary().$this->getLineBreak();
-		$this->message .= $this->getLineBreak()."--".$this->getBoundary().$this->getLineBreak();
+		$this->message = $message;
 
 	}
 
 	public function getMessage()
 	{
 		return $this->message;
-	}
-
-	public function setTxtMessage($txtMessage)
-	{
-		$this->txtMessage = $txtMessage;
-	}
-
-	public function getTxtMessage()
-	{
-		return $this->txtMessage;
-	}
-
-	public function setHtmlMessage($htmlMessage)
-	{
-		$this->htmlMessage = $htmlMessage;
-	}
-
-	public function getHtmlMessage()
-	{
-		return $this->htmlMessage;
-	}
-
-	public function setBoundary()
-	{
-		$this->boundary = "-----=".md5(rand());
-	}
-
-	public function getBoundary()
-	{
-		return $this->boundary;
 	}
 
 	public function setLineBreak($email){
@@ -124,12 +72,9 @@ class Email
 		return $this->lineBreak;
 	}
 
-	public function setValidationMessage()
+	public function setValidationMessage($message)
 	{
-		$this->validationMessage = '<p>Votre message a bien été transmis au collectif Union Square, vous recevrez une réponse dans les meilleurs délais.<p>
-        		<form action="http://localhost/form/index.php">
-    				<input type="submit" value="retour à la page d\'accueil" />
-				</form>';
+		$this->validationMessage = $message;
 	}
 
 	public function getValidationMessage()
@@ -139,8 +84,7 @@ class Email
 
 	public function sentEmail()
 	{
-		$this->setMessage();
-		return mail($this->getAddresseeEmail(), $this->getSubject(), $this->getMessage(), $this->getHeader());
+		return mail($this->getAddresseeEmail(), utf8_decode($this->getSubject()), $this->getMessage(), $this->getHeader());
 	}
 
 }

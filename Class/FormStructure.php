@@ -2,41 +2,43 @@
 
 class Formstructure
 {
-	private $input;
+	private $formElement;
 
-	public function setInput(InputData $data){
+	//définition du contenu des éléments composant le formulaire
+	public function setFormElement(FormData $data){
 		
-		foreach ($data->getData() as $value){
+		foreach ($data->getFormData() as $value){
 			
+			//définition de tous les élements Input
 			if(!empty($value['type'])){
-				
-				if ($value['type'] =="reset" || $value['type'] =="button"){
-				$this->input = '<input type="'.$value['type'].'" value = "'.$value['value'].'"></input>';
-				
+
+				if ($value['type'] == "text" || $value['type'] == "email" || $value['type'] == "number" || $value['type'] == "tel"){
+					$this->formElement = '<p>
+					<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label></br>
+					<input type="'.$value['type'].'" class="champForm" id="'.$value['name'].'" name="'.$value['name'].'" value="'.$value['value'].'" placeholder="'.$value['placeholder'].'" min="0" max="12" step="1" required="'.$value['required'].'">
+					<span class="messageForm" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span>  
+					</p>
+					';
+
+				} elseif ($value['type'] =="reset" || $value['type'] =="button"){
+					$this->formElement = '<input type="'.$value['type'].'" value = "'.$value['value'].'"></input>';
 				} 
 				//on met le submit à part pour inclure le captcha
 				elseif($value['type'] =="submit"){
-					$this->input = '<input type="'.$value['type'].'" class="g-recaptcha" data-sitekey="'.$value['data-sitekey'].'" data-callback="captchaSubmit" data-badge="inline" value = "'.$value['value'].'"></input>';
-				} 
+					$this->formElement = '<button class="g-recaptcha" data-sitekey="'.$value['data-sitekey'].'" data-callback="onSubmit">Envoyer</button>';
+				} 	
 
-				elseif ($value['type'] == "text" || $value['type'] == "email" || $value['type'] == "number" || $value['type'] == "tel"){
-				$this->input = '<p>
-				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label>
-				<input type="'.$value['type'].'" class="champForm" id="'.$value['name'].'" name="'.$value['name'].'" value="'.$value['value'].'" min="0" max="12" step="1" required="required">
-				<span id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span>  
+			} /*définition des éléments de type textarea*/
+			elseif(!empty($value['rows'])){
+				$this->formElement = '<p>
+				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label></br>
+				<textarea name= "'.$value['name'].'" id="'.$value['name'].'"  rows= "'.$value['rows'].'" cols="'.$value['cols'].'" required="'.$value['required'].'" maxlength="'.$value['maxLength'].'" placeholder="'.$value['placeholder'].'">'.$value['value'].'</textarea>
+				<span class="messageForm" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span> 
 				</p>
-				';
-				}
-				
-
-			} elseif(!empty($value['rows'])){
-				$this->input = '<p>
-				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label>
-				<textarea name= "'.$value['name'].'" rows= "'.$value['rows'].'" cols="'.$value['cols'].'" required="required" maxlength="'.$value['maxLength'].'">'.$value['value'].'</textarea>
-				</p>
+				<p>Champs Obligatoires *<p>
 				';
 			}
-			echo $this->input;
+			echo $this->formElement;
 		}
 	}
 }
