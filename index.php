@@ -8,12 +8,25 @@
     <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
     <link type="text/css" rel="stylesheet" href="css/responsive_framework_light.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-  	<header>
-  		<div id="mainLogo"></div>
-  		<nav id="mainMenu">
+  	<header class="row">
+  		<div id="mainLogo" class="col-12-sm"></div>
+  		<nav id="mainMenu" class="hiddenMob">
+  			<ul>
+  				<li><a href="#">Acceuil</a></li>
+  				<li><a href="#">Equipe</a></li>
+  				<li><a href="/form.php">Contact & devis</a></li>
+  			</ul>
+  		</nav>
+  		<div class="container hiddenDesk" onclick="myFunction(this)">
+		  <div class="bar1"></div>
+		  <div class="bar2"></div>
+		  <div class="bar3"></div>
+		</div>
+  		<nav id="mainMenuMobile" class="hiddenDesk Hide">
   			<ul>
   				<li><a href="#">Acceuil</a></li>
   				<li><a href="#">Equipe</a></li>

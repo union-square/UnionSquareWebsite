@@ -25,81 +25,18 @@
 
 @media only screen and (max-width: 45em){
 	/*MOBILE & TAB equiv. 720px*/
+	.hiddenMob{
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 45em){
 	/*DESKTOP*/
-}
-
-
-
-body{
-	width: 100%;
-	font-family: "LatoReg", Fallback, sans-serif;
-	color: #4A4A4A;
-}
-
-header{
-	height: 200px;
-}
-
-#mainLogo{
-	float: left;
-	margin-top: 40px;
-	margin-left: 100px;
-	height: 40px;
-	width: 80px;
-	background-image:url('../img/logo.png');
-	background-repeat: no-repeat;
-}
-
-nav#mainMenu{
-	float: right;
-	font-family: RobotoMedium;
-	font-size: 18px;
-	color: #28BC83;
-	letter-spacing: 0;
-	margin-top: 40px;
-	margin-right: 40px;
-}
-
-ul{
-	list-style: none;
-}
-
-li{
-	display: inline;	
-}
-
-a{
-	color: #28BC83;
-	text-decoration: none;
-	padding: 5px 10px;
-	border: 1px solid #FFF;
-}
-
-a:hover{
-	color: #FFF;
-	padding: 5px 10px;
-	background: #28BC83;
-	border: 1px solid #28BC83;
-	border-radius: 5px
-}
-
-h1, h2{
-	font-family: "AvenirNext", Fallback, sans-serif;
-	color: #28BC83;	
-}
-
-h1{
-	font-size: 36px;
-}
-
-h2{
-	font-size: 24px;
-}
-
-#intro{
+	.hiddenDesk{
+		display: none;
+	}
+	
+	#intro{
 	width: 100%;
 	height: 293px;
 }
@@ -183,9 +120,78 @@ footer{
 #sign{
 	float: right;
 }
-<<<<<<< HEAD
 
-/*partie du concernant le formulaire de contact*/
+}
+
+/*	#####	GLOBAL: #####	*/
+
+body{
+	width: 100%;
+	font-family: "LatoReg", Fallback, sans-serif;
+	color: #4A4A4A;
+}
+
+header{
+	height: 200px;
+}
+
+#mainLogo{
+	float: left;
+	margin-top: 40px;
+	margin-left: 100px;
+	height: 40px;
+	width: 80px;
+	background-image:url('../img/logo.png');
+	background-repeat: no-repeat;
+}
+
+nav#mainMenu{
+	float: right;
+	font-family: RobotoMedium;
+	font-size: 18px;
+	color: #28BC83;
+	letter-spacing: 0;
+	margin-top: 40px;
+	margin-right: 40px;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	display: inline;	
+}
+
+a{
+	color: #28BC83;
+	text-decoration: none;
+	padding: 5px 10px;
+	border: 1px solid #FFF;
+}
+
+a:hover{
+	color: #FFF;
+	padding: 5px 10px;
+	background: #28BC83;
+	border: 1px solid #28BC83;
+	border-radius: 5px
+}
+
+h1, h2{
+	font-family: "AvenirNext", Fallback, sans-serif;
+	color: #28BC83;	
+}
+
+h1{
+	font-size: 36px;
+}
+
+h2{
+	font-size: 24px;
+}
+
+/*	#####	FORM: #####	*/
 
 .champForm{
 	width: 240px;
@@ -237,7 +243,7 @@ textarea{
 .messageForm img{
 	padding-top: 5px;
 }
-=======
+
 footer{
 	width: 100%;
 	border-top: 3px solid #979797;
@@ -261,4 +267,37 @@ footer{
 #sign{
 	float: right;
 }
->>>>>>> 81d8607b2d2589e3967e45f9ac32c543af2bee05
+
+
+.sandwich {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.Hide {
+	display: none;
+}
+
+.Show {
+	display: block;
+}
