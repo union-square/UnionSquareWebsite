@@ -20,6 +20,19 @@
 	src: url("../fonts/Roboto-Medium.woff2") format("woff2");
 }
 
+
+/*	#####	RESPONSIVE: #####	*/
+
+@media only screen and (max-width: 45em){
+	/*MOBILE & TAB equiv. 720px*/
+}
+
+@media only screen and (min-width: 45em){
+	/*DESKTOP*/
+}
+
+
+
 body{
 	width: 100%;
 	font-family: "LatoReg", Fallback, sans-serif;
