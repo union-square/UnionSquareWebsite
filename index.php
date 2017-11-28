@@ -1,5 +1,5 @@
 
-<!-- <?php require'header.inc.php' ?> -->
+<?php require'header.inc.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +16,7 @@
   		<div id="mainLogo" class="col-12-sm"></div>
   		<nav id="mainMenu" class="hiddenMob">
   			<ul>
-  				<li><a href="#">Acceuil</a></li>
+  				<li><a href="#">Accueil</a></li>
   				<li><a href="#">Equipe</a></li>
   				<li><a href="/form.php">Contact & devis</a></li>
   			</ul>
