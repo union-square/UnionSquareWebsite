@@ -1,0 +1,79 @@
+label{
+	width: 100%;
+} 
+
+.champForm{
+	width: 50%;
+	min-width: 250px;
+	border-radius: 4px;
+	border: solid 1px #979797;
+	height: 35px;
+	margin-bottom: 5px;
+}
+
+.errorMessage{
+	width: 100%;
+}
+
+textarea{
+	border-radius: 4px; 
+	border: solid 1px #979797;
+	width: 90%;
+	min-width: 266px;
+}
+
+.grecaptcha-badge{
+	display: none;
+}
+
+.g-recaptcha{
+	background: #28BC83;
+	border-radius: 6px;
+	border: solid 1px #28BC83;
+	width: 100px;
+	color:#FFFFFF  ;
+}
+
+.errorMessageCheckFormPhp{
+	color: #e66868;
+}
+
+#formSucceedMessage{
+	color:#28BC83;
+	border: solid 2px #28BC83;
+	font-weight: bold;
+	padding: 15px;
+	width: 90%;
+}
+
+#formSucceedMessage p{
+	color:#28BC83;
+	font-weight: bold;
+}
+
+#formFailedMessage p{
+	color:#e66868;
+	font-weight: bold;
+}
+
+#formFailedMessage{
+	color:#e66868;
+	border: solid 2px #e66868;
+	font-weight: bold;
+	padding: 15px;
+	width: 90%;
+}
+
+.formFailedMessage{
+	color: #e66868;
+	border: solid 2px #e66868;
+	font-weight: bold;
+}
+
+.messageForm img{
+	padding-top: 5px;
+}
+
+#contact{
+	margin-bottom: 80px;
+}

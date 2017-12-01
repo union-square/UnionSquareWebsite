@@ -14,9 +14,9 @@ class Formstructure
 
 				if ($value['type'] == "text" || $value['type'] == "email" || $value['type'] == "number" || $value['type'] == "tel"){
 					$this->formElement = '<p>
-					<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label></br>
+					<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label>
 					<input type="'.$value['type'].'" class="champForm" id="'.$value['name'].'" name="'.$value['name'].'" value="'.$value['value'].'" placeholder="'.$value['placeholder'].'" min="0" max="12" step="1" required="'.$value['required'].'">
-					<span class="messageForm" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span>  
+					<span class="errorMessage" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span>  
 					</p>
 					';
 
@@ -31,9 +31,9 @@ class Formstructure
 			} /*définition des éléments de type textarea*/
 			elseif(!empty($value['rows'])){
 				$this->formElement = '<p>
-				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label></br>
+				<label class="labelForm" for="'.$value['name'].'">'.$value['labelContent'].'</label>
 				<textarea name= "'.$value['name'].'" id="'.$value['name'].'"  rows= "'.$value['rows'].'" cols="'.$value['cols'].'" required="'.$value['required'].'" maxlength="'.$value['maxLength'].'" placeholder="'.$value['placeholder'].'">'.$value['value'].'</textarea>
-				<span class="messageForm" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span> 
+				<span class="errorMessage" id="'.$value['name'].'Statut" style="display:none;">'.$value['errMessage'].'</span> 
 				</p>
 				<p>Champs Obligatoires *<p>
 				';

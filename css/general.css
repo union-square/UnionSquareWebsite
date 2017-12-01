@@ -1,0 +1,71 @@
+html{
+	font-size: 100%;
+}
+
+@font-face{
+	font-family: "LatoReg";
+	src: url("../fonts/Lato-Regular.ttf") format("truetype"),
+	url("../fonts/Lato-Regular.woff") format("woff"),
+	url("../fonts/Lato-Regular.woff2") format("woff2"),
+	url("../fonts/Lato-Regular.eot") format("embedded-opentype");
+}
+
+@font-face {
+    font-family: "avenir_next_lt_prodemi";
+    src: url('../fonts/avenir_next_lt_pro_demi-webfont.ttf') format('truetype'),
+    url('../fonts/avenir_next_lt_pro_demi-webfont.woff2') format('woff2'),
+         url('../fonts/avenir_next_lt_pro_demi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face{
+	font-family: "RobotoMedium";
+	src: url("../fonts/Roboto-Medium.ttf") format("truetype"),
+	url("../fonts/Roboto-Medium.woff") format("woff"),
+	url("../fonts/Roboto-Medium.woff2") format("woff2");
+}
+
+*{
+	box-sizing: border-box;
+	font-size: 1.06rem;
+	color: #4A4A4A;
+	font-family: "LatoReg", sans-serif;
+}
+
+body{
+	margin: 0px;
+	width: 100%;	
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+h1, h2{
+	font-family: "avenir_next_lt_prodemi", sans-serif;
+	color: #28BC83;	
+}
+
+h1{
+	font-size: 2.25rem;
+}
+
+h2{
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+
+.row{
+	position:relative;
+}
+
+svg{
+	display: block;
+}
+
+@media (min-width: 1200px) {
+	
+	.container {
+		width: 90%;
+  	}
+}

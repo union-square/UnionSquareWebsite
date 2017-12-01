@@ -1,31 +1,26 @@
-</main>
-  <footer>
-    <div class="logoBot"></div>
-      <nav id="menuBot">
-      <ul>
-          <li><a href="#">Cookies</a></li>
-          <li><a href="#">Mention légales</a></li>
-          <li><a href="#">Contact</a></li>
-      </ul>
-      </nav>
-    <div id="sign">
-      <p>
-        Site biologique réalisé en bois recyclé<br>
-        (On sait faire des blagues aussi...)  
-      </p>
-      <p>
-        &copy; 
-        <?php
-        $copyYear = 2017; // Set your website start date
-        $curYear = date('Y'); // Keeps the second year updated
+      </main>
+      <footer class="row">
+        
+          <div class="col-sm-6 col-sm-push-2 col-md-6 col-sm-push-2 col-xs-12">
+              <nav>
+                  <ul>
+                      <li><a href="mentionsLegales.php">Mentions légales</a></li>
+                      <li><a href="contact.php">Contact</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <a href="index.php"><img class="col-sm-2 col-sm-pull-6 col-md-2 col-md-pull-6 col-xs-6" src="img/logo.svg" alt="logo" height="60"/></a>
+          <div class="col-sm-4 col-md-3 col-xs-6">
+              <p class="hidden-xs">
+              Site biologique réalisé en bois recyclé <b> &copy; <?php echo date('Y');?> Union Square</b>
+              </p>
+          </div>
+      </footer>
 
-        echo $copyYear . (($copyYear != $curYear) ? '-' . $curYear : '');
-        ?>
-      Union Square
-    </p>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script type="text/javascript" src="js/form.js"></script>
+
     </div>
-  </footer>
-
-    <script type="text/javascript" src="js/script.js"></script>
   </body>
+
 </html>

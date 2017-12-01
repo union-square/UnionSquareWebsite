@@ -1,0 +1,171 @@
+main{
+	margin: 0px;
+	width: 100%;	
+	padding: 0px;	
+}
+
+p{
+	margin: 10px 0 30px 0;
+}
+
+.oddParagraph{
+	background-color: #F9F9F9;
+	}
+
+.evenParagraph{
+	background-color: #FFFFFF;
+	z-index: -1;
+}
+
+#svgSmallTriangleTop{
+	position: absolute;
+    top: -43px;
+    left: 100%;
+    transform: translateX(-150px);
+}
+
+#svgBigTriangleDown{
+	position: absolute;
+    top: 400px;
+    left: 0%;
+}
+
+#svgBigTriangleTop{
+	position: absolute;
+    top: 0px;
+    left: 100%;
+    transform: translateX(-300px);
+}
+
+.paragraphPicture, .paragraphText{
+	margin:auto;
+	text-align: center;
+}
+
+.paragraphText p{
+	text-align: left;
+}
+
+.paragraphPicture>img{
+	width: 160px;
+	margin: 20px 0 10px 0;
+} 
+
+.sep{
+	margin-bottom: 16px;
+}
+
+#equipe h1{
+	margin-bottom: 20px;
+}
+
+#equipe h2{
+	color: #4A4A4A;
+}
+
+#equipe>div:first-Child{
+	margin-bottom: 50px;
+}
+
+#equipe>div:last-Child{
+	margin-bottom: 80px;
+}
+
+#equipe>div:first-Child div:last-Child{
+	height: 200px;
+	background-color: #D8D8D8;
+}
+
+#equipe .individualPresentation img{
+	overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:200px;
+    height:200px;
+}
+
+#equipe .individualPresentation{
+	text-align: center;
+	}
+
+#equipe .individualPresentation div{
+	text-align: left;
+	}
+
+#equipe .individualPresentation a{
+	color: #28BC83;
+	}	
+
+#mentionLegales h1{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#mentionLegales h2{
+	margin: 30px 0;
+}
+
+svg{
+	margin: auto;
+}
+
+@media (min-width: 768px) {
+
+	p{
+	margin: 0 0 10px 0;
+	}
+  	.accueil [class*="col-"]{
+		height: 400px;
+		display: flex;
+	}
+
+	.paragraphText{
+		text-align: left;
+	}
+
+	#desactivatedBurger{
+		height: 170px;
+		padding-top: 50px;
+	}
+
+	svg{
+	margin: 0px;
+	}
+}
+
+@media (min-width: 992px) {
+ 	.paragraphPicture>img{
+		width: auto;
+		margin:0;
+	} 
+
+	
+
+	#equipe .individualPresentation img{
+	overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:150px;
+    height:150px;
+    margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	#equipe .individualPresentation{
+	padding: 0 10px; 
+	}
+
+	#equipe .individualPresentation img{
+	overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:200px;
+    height:200px;
+    margin-bottom: 10px;
+	}
+}
