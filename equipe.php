@@ -5,7 +5,7 @@
 		<div class="col-sm-4">
 			<h1>Qui sommes-nous ?</h1>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+				Union Square, c’est un <strong>collectif bordelais spécialisé dans la création de site internet</strong>. C’est la rencontre de 4 passionnés, 4 amis, qui ont souhaité allier leur savoir-faire au service de votre projet web. <br>Le travail en collectif nous permet plus de liberté et parce que chaque projet est différent, de vous apporter <strong>les compétences dont vous avez réellement besoin</strong>.
 			</p>
 		</div>
 		<div class="col-sm-offset-2 col-sm-4">
@@ -19,7 +19,10 @@
 			<div>
 				<h2>Le Dev'</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+					Disciple Zen dans l’art du développement,  il manie <strong>PHP et SQL avec précision</strong> pour rendre votre site fonctionnel. Il appréhende le code avec sérénité, pour ne faire plus qu’un avec lui. Son enseignement l’a conduit sur les voies de <strong>Symphony</strong> dont il maîtrise bien des secrets.<br>
+				</p>
+				<p>
+					<b>Particularité :</b> il parle chinois couramment et aime les pulls en cachemire.
 				</p>
 			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
 			</div>
@@ -29,7 +32,10 @@
 			<div>
 				<h2>L'intégrateur</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+					L’intégration, il est né pour ça ! Il s’occupe de transcrire votre site en code avec style et doigté. Elevé à <strong>HTML/CSS et JavaSCript</strong>, nourri à <strong>Bootstrap et SASS</strong>, on dit même qu’il mange du <strong>Wordpress et Drupal</strong> au petit déjeuner.
+				</p>
+				<p>
+					<b>Particularité :</b> en bon anglais, il est amateur de bière !
 				</p>
 			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
 			</div>
@@ -39,19 +45,25 @@
 			<div>
 				<h2>Le web designer</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+					C’est notre <strong>spécialiste UI/UX</strong> et designer en chef. Le genre à gribouiller sur tous les coins de feuilles. Il a la lourde tâche d’illustrer vos mots en images. <strong>Exigeant dans son travail</strong>, il porte attention à chaque trait, chaque couleur et soigne ses graphismes aux petits oignons.
+				</p> 
+				<p>
+					<b>Particularité :</b> il collectionne les montres russes.
 				</p>
 			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
 			</div>
 		</div>
 		<div class="individualPresentation col-md-3">
-			<img src="img/Anthony_Boulord.jpg">
+			<img src="img/gregory_bodin.jpg">
 			<div>
-				<h2>Le SEO</h2>
+				<h2>Le référenceur</h2>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+					Dans la jungle du net, il s’assure que votre site <strong>soit visible et atteigne sa cible</strong>. Entraîné, il allie la patience efficiente du <strong>éférencement naturel</strong> à la vivacité efficace <strong>d’Adwords</strong>. Établir une stratégie, débusquer les mot-clés, être à l’affût de la concurrence, c’est sa seconde nature.
 				</p>
-			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
+				<p>
+					<b>Particularité :</b> Nostalgique, il affectionne la dance des années 90 !
+				</p>
+<!-- 			<a href="http://www.anthony-boulord.fr/">Site personnel</a> -->
 			</div>
 		</div>
 	</div>

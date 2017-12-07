@@ -21,11 +21,11 @@
                           </svg>
                       </div>
                       <p>
-                        Union Square est une agence web collaborative, basée sur Bordeaux.
+                        Union Square est une <strong>agence web collaborative</strong>, basée sur Bordeaux.
                         Comme les angles d’un carré, nous sommes 4. Quatre professionnels , spécialistes de nos disciplines respectives, unis au service de votre site internet.
                       </p>
                       <p>
-                        Notre travail en collectif nous permet d’avoir une vision globale sur chacun des projets. Car au-délà d’un savoir-faire individuel, c’est tout une équipe qui travaille en complémentarité pour vous apportez une offre web complète et sur-mesure.
+                        Notre travail en collectif nous permet d’avoir une <strong>vision globale</strong> sur chacun des projets. Car au-délà d’un savoir-faire individuel, c’est tout une équipe qui travaille en complémentarité pour vous apportez <strong>une offre web complète et sur-mesure</strong>.
                       </p>
                   </div>
               </div>
@@ -52,10 +52,10 @@
                           </svg>
                       </div>
                       <p>
-                        Sur un marché toujours plus compétitifs, il est important de se démarquer. C’est pourquoi l’agence Web Union Square vous accompagne dès les premières esquisses, pour répondre au plus près à vos besoins et envies.
+                        Sur un marché toujours plus compétitifs, il est important de se démarquer. C’est pourquoi l’agence Web Union Square vous accompagne <b>dès les premières esquisses</b>, pour répondre au plus près à vos besoins et envies.
                       </p>
                       <p>
-                        Notre graphiste, spécialiste en UX Design, saura répondre à vos problématiques en vous proposant des solutions d’optimisation. Ensemble, nous validerons étapes par étapes, les éléments de la charte graphique, le logo, les maquettes des différentes pages pour créer le site internet qui vous correspond.
+                        Notre graphiste, <strong>spécialiste en UX Design</strong>, saura répondre à vos problématiques en vous proposant des solutions d’optimisation. Ensemble, nous validerons étapes par étapes, les éléments de la charte graphique, le logo, les maquettes des différentes pages pour créer le site internet qui <b>vous correspond</b>.
                       </p>
                   </div>
               </div>
@@ -83,10 +83,10 @@
                           </svg>
                       </div>
                       <p>
-                         Quelque soit votre besoin en terme de présence sur le web, Union Square vous apporte la solution. Site vitrine, e-commerce, nous réalisons pour vous un site web fonctionnel, personnalisable et sur-mesure. Nous travaillons avec les derniers standard de création web : HTML/CSS, PHP, JavaScript mais également avec des logiciels dédiés tel que Wordpress et PrestaShop.
+                         Quelque soit votre besoin en terme de présence sur le web, Union Square vous apporte la solution. Site vitrine, e-commerce, nous réalisons pour vous <strong>un site web fonctionnel, personnalisable et sur-mesure</strong>. Nous travaillons avec les derniers standard de création web : HTML/CSS, PHP, JavaScript mais également avec des logiciels dédiés tel que <strong>Wordpress et PrestaShop</strong>.
                       </p>
                       <p>
-                        Et parce qu’aujourd’hui, nous sommes tous ultra-connectés, Union Square développe ses sites internets au format tablettes et mobiles.
+                        Et parce qu’aujourd’hui, nous sommes tous ultra-connectés, Union Square développe ses sites internets <strong>au format tablettes et mobiles</strong>.
                       </p>
                   </div>
               </div>
@@ -112,7 +112,7 @@
                         Être présent sur le web, c’est bien, mais être visible, c’est encore mieux !
                       </p>
                       <p>
-                        Afin d’augmenter votre visibilité sur internet et être sûr de toucher sa cible, le référencement de votre site internet est une étape indispensable. Ensemble, nous déterminons vos objectifs (visibilité, gain de trafic, transformation,…) et définissons une stratégie de référencement adaptée. SEO, SEA, réseaux sociaux, nous assurons votre visibilité à tous les niveaux pour un retour sur investissement optimal.
+                        Afin d’augmenter <strong>votre visibilité sur internet</strong> et être sûr de toucher sa cible, le référencement de votre site internet est une étape indispensable. Ensemble, nous déterminons vos objectifs (visibilité, gain de trafic, transformation,…) et définissons une stratégie de référencement adaptée. SEO, SEA, affiliation, nous assurons votre visibilité à tous les niveaux pour <strong>un retour sur investissement optimal</strong>.
                       </p>
                   </div>
               </div>

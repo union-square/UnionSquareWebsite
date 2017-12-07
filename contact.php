@@ -20,7 +20,8 @@ require'incl/header.php';
 	<div class="row">
 		<div class="col-md-offset-1 col-md-4">
 			<h1>Contactez-nous &#38; rencontrez-nous !</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Vous avez un projet, une idée ou juste l’envie de prendre un café en notre compagnie ?<br>
+			Remplissez le formulaire à votre disposition et nous vous contacterons <b>dans les plus brefs délais.</b></p>
 		</div>
 		<div class="col-md-offset-2 col-md-4" id="formFrame">
 			<?php
