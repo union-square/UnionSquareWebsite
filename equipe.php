@@ -58,7 +58,7 @@
 			<div>
 				<h2>Le référenceur</h2>
 				<p>
-					Dans la jungle du net, il s’assure que votre site <strong>soit visible et atteigne sa cible</strong>. Entraîné, il allie la patience efficiente du <strong>éférencement naturel</strong> à la vivacité efficace <strong>d’Adwords</strong>. Établir une stratégie, débusquer les mot-clés, être à l’affût de la concurrence, c’est sa seconde nature.
+					Dans la jungle du net, il s’assure que votre site <strong>soit visible et atteigne sa cible</strong>. Entraîné, il allie la patience efficiente du <strong>référencement naturel</strong> à la vivacité efficace <strong>d’Adwords</strong>. Établir une stratégie, débusquer les mot-clés, être à l’affût de la concurrence, c’est sa seconde nature.
 				</p>
 				<p>
 					<b>Particularité :</b> Nostalgique, il affectionne la dance des années 90 !
