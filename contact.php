@@ -66,7 +66,7 @@ require'incl/header.php';
 						$email->sentEmail();
 						}
 						?>
-						<form id="contact" method="post">
+						<form id="contactForm" method="post">
 							<?php
 							$form->setFormElement($formData);
 							?>
@@ -76,7 +76,7 @@ require'incl/header.php';
 						if($email->sentEmail()){
 							echo'<div id="formSucceedMessage">
 							<p>Votre message nous a été transmis, vous recevrez un email pour confirmer l\'envoi de votre message</p>
-							<p>Nous vous recontacterons au plus vite. A bientôt!</p>
+							<p>Nous vous recontacterons au plus vite. A bientôt !</p>
 							</div>';
 						} else{
 							echo '<div id="formFailedMessage">
@@ -91,7 +91,7 @@ require'incl/header.php';
 						//on enregistrer les valeurs qui sont valides afin de ne pas avoir à les renseignées à nouveau
 						$formData->setFormDataValue($_POST);
 						?>
-						<form id="contact" method="post">
+						<form id="contactForm" method="post">
 							<?php
 							$form->setFormElement($formData);
 							?>
@@ -101,7 +101,7 @@ require'incl/header.php';
 				}
 			} else{
 				?>
-				<form id="contact" method="post">
+				<form id="contactForm" method="post">
 					<?php
 					$form->setFormElement($formData);
 					?>

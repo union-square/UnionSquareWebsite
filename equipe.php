@@ -15,7 +15,7 @@
 
 	<div class="row">
 		<div class="individualPresentation col-md-3">
-			<img src="img/Anthony_Boulord.jpg">
+			<img src="img/Anthony_Boulord.jpg" alt="Anthony Boulord" title="Anthony Boulord">
 			<div>
 				<h2>Le Dev'</h2>
 				<p>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<div class="individualPresentation col-md-3">
-			<img src="img/Anthony_Boulord.jpg">
+			<img src="img/Dominic_Taylor.jpg" alt="Dominic Taylor" title="Dominic Taylor">
 			<div>
 				<h2>L'intégrateur</h2>
 				<p>
@@ -37,11 +37,11 @@
 				<p>
 					<b>Particularité :</b> en bon anglais, il est amateur de bière !
 				</p>
-			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
+			<a href="http://taylerd-design.eu/">Site personnel</a>
 			</div>
 		</div>
 		<div class="individualPresentation col-md-3">
-			<img src="img/Paul_Faro.jpg">
+			<img src="img/Paul_Faro.jpg" alt="Paul Faro" title="Paul Faro">
 			<div>
 				<h2>Le web designer</h2>
 				<p>
@@ -50,11 +50,11 @@
 				<p>
 					<b>Particularité :</b> il collectionne les montres russes.
 				</p>
-			<a href="http://www.anthony-boulord.fr/">Site personnel</a>
+			<a href="http://www.paulfaro.fr/">Site personnel</a>
 			</div>
 		</div>
 		<div class="individualPresentation col-md-3">
-			<img src="img/gregory_bodin.jpg">
+			<img src="img/gregory_bodin.jpg" alt="Grégory Bodin" title="Grégory Bodin">
 			<div>
 				<h2>Le référenceur</h2>
 				<p>
@@ -63,7 +63,6 @@
 				<p>
 					<b>Particularité :</b> Nostalgique, il affectionne la dance des années 90 !
 				</p>
-<!-- 			<a href="http://www.anthony-boulord.fr/">Site personnel</a> -->
 			</div>
 		</div>
 	</div>

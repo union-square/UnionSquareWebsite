@@ -15,7 +15,7 @@
       <script>
           function onSubmit(data) 
           {
-              document.getElementById("contact").submit();
+              document.getElementById("contactForm").submit();
           }
       </script>
 
