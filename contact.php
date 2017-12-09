@@ -42,7 +42,7 @@ require'incl/header.php';
 						else {	
 						//on envoie un mail au client indiquant que la demande a bien été prise en compte
 						$email->setAddresseeEmail($_POST['contactEmail']);
-						$email->setHeader("Union Square", "boulord.anthony@gmail.com");
+						$email->setHeader("Union Square", "contact@unionsquare.fr");
 						$email->setSubject("Nous avons bien reçu votre demande");
 						$email->setMessage("<p>Bonjour ".$_POST['contactName'].",</br></br>
 							Vous êtes entré en contact avec le collectif <b>Union Square</b> et nous vous en remercions. </br></br>
@@ -54,8 +54,8 @@ require'incl/header.php';
 						$email->sentEmail();
 						
 						//on s'envoie un mail contenant le message du client		
-						$email->setAddresseeEmail("boulord.anthony@hotmail.com");
-						$email->setHeader("Anthony", "boulord.anthony@gmail.com", "Anthony", "boulord.anthony@gmail.com");
+						$email->setAddresseeEmail("contact@unionsquare.fr");
+						$email->setHeader("Union Square", "contact@unionsquare.fr");
 						$email->setSubject("message du client: ".$_POST['contactName']."");
 						$email->setMessage("<p>
 												nom du client : ".$_POST['contactName']."</br></br>

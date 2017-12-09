@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div class="individualPresentation col-md-3">
-			<img src="img/Anthony_Boulord.jpg">
+			<img src="img/Paul_Faro.jpg">
 			<div>
 				<h2>Le web designer</h2>
 				<p>
