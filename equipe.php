@@ -19,7 +19,7 @@
 			<div>
 				<h2>Le Dev'</h2>
 				<p>
-					Disciple Zen dans l’art du développement,  il manie <strong>PHP et SQL avec précision</strong> pour rendre votre site fonctionnel. Il appréhende le code avec sérénité, pour ne faire plus qu’un avec lui. Son enseignement l’a conduit sur les voies de <strong>Symphony</strong> dont il maîtrise bien des secrets.<br>
+					Disciple Zen dans l’art du développement,  il manie <strong>PHP et SQL avec précision</strong> pour rendre votre site fonctionnel. Il appréhende le code avec sérénité, pour ne faire plus qu’un avec lui. Son enseignement l’a conduit sur les voies de <strong>Symfony</strong> dont il maîtrise bien des secrets.<br>
 				</p>
 				<p>
 					<b>Particularité :</b> il parle chinois couramment et aime les pulls en cachemire.
