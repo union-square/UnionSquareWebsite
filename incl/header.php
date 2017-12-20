@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link type="text/css" rel="stylesheet" href="css/general.css"/>
       <link type="text/css" rel="stylesheet" href="css/headerFooter.css"/>
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
       <link type="text/css" rel="stylesheet" href="css/main.css"/>
       <link type="text/css" rel="stylesheet" href="css/form.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1">
