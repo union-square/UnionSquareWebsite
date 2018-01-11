@@ -2,7 +2,6 @@
 <html lang="fr">
   <head>
       <title>Union Square</title>
-      <meta name="robots" content="noindex">
       <meta charset="utf-8">
       <link type="text/css" rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
