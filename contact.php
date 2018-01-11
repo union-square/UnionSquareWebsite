@@ -40,30 +40,30 @@ require'incl/header.php';
 						}
 						//si le recaptcha a validé l'envoi
 						else {	
-						//on envoie un mail au client indiquant que la demande a bien été prise en compte
-						$email->setAddresseeEmail($_POST['contactEmail']);
-						$email->setHeader("Union Square", "contact@unionsquare.fr");
-						$email->setSubject("Nous avons bien reçu votre demande");
-						$email->setMessage("<p>Bonjour ".$_POST['contactName'].",</br></br>
-							Vous êtes entré en contact avec le collectif <b>Union Square</b> et nous vous en remercions. </br></br>
-							Cette email vous a été envoyé automatiquement pour vous confirmer que votre demande nous a bien été transmise.</br></br>
-							L'équipe d'Union Square vous recontactera rapidement.</br></br>
-							A très bientôt,</br></br>
-							Union Square</br></br>
-							</p>");
-						$email->sentEmail();
-						
-						//on s'envoie un mail contenant le message du client		
-						$email->setAddresseeEmail("contact@unionsquare.fr");
-						$email->setHeader("Union Square", "contact@unionsquare.fr");
-						$email->setSubject("message du client: ".$_POST['contactName']."");
-						$email->setMessage("<p>
-												nom du client : ".$_POST['contactName']."</br></br>
-												contenu du message : ".$_POST['message']."</br></br>
-												numéro de téléphone du client : ".$_POST['telephone']."</br></br>
-												email du client : ".$_POST['contactEmail']."</br></br>
-											</p>");
-						$email->sentEmail();
+							//on envoie un mail au client indiquant que la demande a bien été prise en compte
+							$email->setAddresseeEmail($_POST['contactEmail']);
+							$email->setHeader("Union Square", "contact@unionsquare.fr");
+							$email->setSubject("Nous avons bien reçu votre demande");
+							$email->setMessage("<p>Bonjour ".$_POST['contactName'].",</br></br>
+								Vous êtes entré en contact avec le collectif <b>Union Square</b> et nous vous en remercions. </br></br>
+								Cette email vous a été envoyé automatiquement pour vous confirmer que votre demande nous a bien été transmise.</br></br>
+								L'équipe d'Union Square vous recontactera rapidement.</br></br>
+								A très bientôt,</br></br>
+								Union Square</br></br>
+								</p>");
+							$email->sentEmail();
+							
+							//on s'envoie un mail contenant le message du client		
+							$email->setAddresseeEmail("contact@unionsquare.fr");
+							$email->setHeader("Union Square", "contact@unionsquare.fr");
+							$email->setSubject("message du client: ".$_POST['contactName']."");
+							$email->setMessage("<p>
+													nom du client : ".$_POST['contactName']."</br></br>
+													contenu du message : ".$_POST['message']."</br></br>
+													numéro de téléphone du client : ".$_POST['telephone']."</br></br>
+													email du client : ".$_POST['contactEmail']."</br></br>
+												</p>");
+							$email->sentEmail();
 						}
 						?>
 						<form id="contactForm" method="post">

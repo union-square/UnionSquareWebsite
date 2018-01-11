@@ -2,10 +2,6 @@
 
 class Recaptcha{
 	
-	/*public function __construct(){
-        $this->config = require('config.php');
-    }*/
-
 	public function verifyResponse($recaptcha){
 		
 		$remoteIp = $this->getIPAddress();
