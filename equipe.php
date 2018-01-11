@@ -8,9 +8,6 @@
 				Union Square, c’est un <strong>collectif bordelais spécialisé dans la création de site internet</strong>. C’est la rencontre de 4 passionnés, 4 amis, qui ont souhaité allier leur savoir-faire au service de votre projet web. <br>Le travail en collectif nous permet plus de liberté et parce que chaque projet est différent, de vous apporter <strong>les compétences dont vous avez réellement besoin</strong>.
 			</p>
 		</div>
-		<!-- <div class="col-sm-offset-2 col-sm-4">
-			
-		</div> -->
 	</div>
 
 	<div class="row">

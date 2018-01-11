@@ -71,11 +71,6 @@ p{
 	margin-bottom: 80px;
 }
 
-/* #equipe>div:first-Child div:last-Child{
-	height: 200px;
-	background-color: #D8D8D8;
-} */
-
 #equipe .individualPresentation img{
 	overflow:hidden;
     -webkit-border-radius:100px;
